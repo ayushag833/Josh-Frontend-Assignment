@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
+        <script src="script.js" type="module"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
             integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
@@ -213,7 +213,55 @@
                         velit mollit. lorem ipsum</p>
                     <div class="carousel">
                         <div class="card-section1">
+                            <div class="card">
+                                <img
+                                    src="images/recommendations-images/Rating.png"
+                                    alt="Image1">
+                                <div class="card-content1">
+                                    <h3>Amazing work!</h3>
+                                    <p>Lorem ipsum dolor sit amet, <br>
+                                        consectetur
+                                        adipiscing elit. Vitae nulla <br> diam
+                                        in ac
+                                        dictum a urna viverra morbi. <br> Morbi
+                                        donec
+                                        amet....</p>
+                                    <div class="profile">
+                                        <img
+                                            src="images/recommendations-images/Profile1.png"
+                                            alt>
+                                        <div>
+                                            <h4>Tiana Philips</h4>
+                                            <h5>Photographer</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="card">
+                                <img
+                                    src="images/recommendations-images/Rating.png"
+                                    alt="Image1">
+                                <div class="card-content1">
+                                    <h3>Great Quality!</h3>
+                                    <p>Lorem ipsum dolor sit amet, <br>
+                                        consectetur
+                                        adipiscing elit. Vitae nulla <br> diam
+                                        in ac
+                                        dictum a urna viverra morbi. <br> Morbi
+                                        donec
+                                        amet....</p>
+                                    <div class="profile">
+                                        <img
+                                            src="images/recommendations-images/Profile2.png"
+                                            alt>
+                                        <div>
+                                            <h4>Talan Westervelt</h4>
+                                            <h5>Business man</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card">
                                 <img
                                     src="images/recommendations-images/Rating.png"
@@ -277,16 +325,15 @@
                                         amet....</p>
                                     <div class="profile">
                                         <img
-                                            src="images/recommendations-images/Profile2.png"
+                                            src="images/recommendations-images/Profile.png"
                                             alt>
                                         <div>
-                                            <h4>Talan Westervelt</h4>
-                                            <h5>Business man</h5>
+                                            <h4>James Gouse</h4>
+                                            <h5>Graphic Designer</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -297,24 +344,31 @@
                     <div class="my-info">
                         <h1>Leave ME Your Info</h1>
                         <form>
-                            <label for="name">Your Full Name ( Required)</label>
-                            <input type="text" id="name">
-                            <label for="email">Your Email ( Required)</label>
-                            <input type="text" id="email">
+                            <label for="fullname">Your Full Name (
+                                Required)</label>
+                            <input type="text" id="fullname" name="Full Name">
+                            <label for="email">Your Email (
+                                Required)</label>
+                            <input type="email" id="email" name="Email">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject">
-                            <label for="message">Your Message</label>
-                            <textarea type="text" id="message"></textarea>
-                            <button class="btn send-message-btn">SEND
+                            <input type="text" id="subject" name="Subject">
+                            <label id="msg" for="message">Your
+                                Message</label>
+                            <textarea type="text" id="message"
+                                name="Message"></textarea>
+                            <button class="btn send-message-btn"
+                                type="submit">SEND
                                 MESSAGE</button>
                         </form>
                     </div>
                     <div class="contact-info">
                         <h1>Contact Information</h1>
                         <div class="box">
-                            <img src="images/contact-images/Ellipse 41.png" alt
+                            <img src="images/contact-images/Ellipse 41.png"
+                                alt
                                 class="img1">
-                            <img src="images/contact-images/location.png" alt
+                            <img src="images/contact-images/location.png"
+                                alt
                                 class="img2">
                             <div>
                                 <h3>Country:</h3>
@@ -330,7 +384,8 @@
                             </div>
                         </div>
                         <div class="box">
-                            <img src="images/contact-images/Ellipse 41.png" alt
+                            <img src="images/contact-images/Ellipse 41.png"
+                                alt
                                 class="img1">
                             <img src="images/contact-images/mail.png" alt
                                 class="img2">
@@ -348,7 +403,8 @@
                             </div>
                         </div>
                         <div class="box">
-                            <img src="images/contact-images/Ellipse 41.png" alt
+                            <img src="images/contact-images/Ellipse 41.png"
+                                alt
                                 class="img1">
                             <img src="images/contact-images/Mobile.png" alt
                                 class="img2">
@@ -437,34 +493,57 @@
                             </div>
                         </div>
                     </div>
-                    <h4> <img src="images/footer-images/Copyright Circle.png"
+                    <h4> <img
+                            src="images/footer-images/Copyright Circle.png"
                             alt> 2024 Copyright, All Right Reserved</h4>
                 </div>
             </div>
-
         </div>
         <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
             integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- <script>
-            const links = document.querySelectorAll("nav ul a");
-            let prevEle;
-            parentEle.className === "skills-container"
-            ? (prevEle = links[1])
-            : (prevEle = links[0]);
-            prevEle.classList.add("active");
-
-            links.forEach((ele) => {
-            ele.addEventListener("click", () => {
-                prevEle.classList.remove("active");
-                prevEle = ele;
-                ele.classList.add("active");
+        <script>
+          $(".card-section1").slick({
+            dots: true,
+            infinite: true,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "6%",
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+                },
+            ],
             });
-            });
-        </script> -->
+        </script>
     </body>
 </html>
