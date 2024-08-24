@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 13rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Home Section CSS */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.2rem 6rem;
+  position: fixed;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  background-color: #fff;
+  height: 9.5rem;
+}
+
+nav img {
+  width: 158px;
+  height: 76px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-left: 30.5rem;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 14px;
+}
+
+.active {
+  padding: 10px 14px;
+  border-radius: 5px;
+  background-color: #ffb400;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+  margin-top: 9.5rem;
+  margin-bottom: 0;
+  width: 90rem;
+  height: 39.3rem;
+}
+
+.hero-section {
+  margin-top: 6rem;
+}
+
+.hero-section .hero-images img {
+  position: absolute;
+  width: 22.83px;
+  height: 21.58px;
+  z-index: 2;
+}
+
+.hero-section .hero-images .img1 {
+  top: 222.15px;
+  left: 742.39px;
+}
+
+.hero-section .hero-images .img2 {
+  top: 664.58px;
+  left: 796.42px;
+}
+
+.hero-section .hero-images .img3 {
+  top: 192.47px;
+  left: 57.39px;
+}
+
+.hero-section .hero-images .img4 {
+  top: 721.29px;
+  left: 125.89px;
+}
+
+.hero-section .hero-images .img5 {
+  top: 726.04px;
+  left: 1315.64px;
+  width: 20px;
+  height: 20px;
+}
+
+.hero-section .hero-images .img6 {
+  top: 246.97px;
+  left: 1279.19px;
+  width: 28px;
+  height: 25px;
+}
+
+.hero-section .hero-images .img7 {
+  top: 603.23px;
+  left: 534.78px;
+  width: 30px;
+  height: 28px;
+}
+
+.hero-section h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  width: 721.69px;
+  height: 160px;
+  line-height: 3.7rem;
+  margin-left: 2rem;
+  margin-top: 1.8rem;
+  letter-spacing: -0.1px;
+}
+
+.hero-section h1 span {
+  color: #ffb400;
+}
+
+.hero-section p {
+  margin: 1.6rem 2.2rem;
+  width: 37.5rem;
+  height: 7.4rem;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #767676;
+  text-transform: capitalize;
+}
+
+.proud-coder-image {
+  position: absolute;
+  top: 231.59px;
+  left: 631.68px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  height: 3rem;
+  width: 9.6rem;
+  background-color: #ffb400;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #2b2b2b;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-btn {
+  margin-top: 2.1rem;
+  margin-left: 2.2rem;
+  letter-spacing: 0.1px;
+}
+
+.hero-btn img {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Projects Section CSS */
+
+.projects {
+  width: 1244.31px;
+  height: 66rem;
+  margin-left: 5.7rem;
+}
+
+.projects > h1 {
+  text-align: center;
+  margin-top: 3.6rem;
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+
+.projects > p {
+  text-align: center;
+  color: #767676;
+  margin: 0.8rem 1.5rem;
+  margin-left: 35px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.05px;
+}
+
+.grey-bg {
+  background-color: #f0f0f6;
+  padding-block: 5px;
+}
+
+.card-section {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-left: 5px;
+  margin-top: 2.8rem;
+}
+
+.card-section .card {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 385px;
+  height: 27rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-section .card img {
+  width: 100%;
+}
+
+.card-content {
+  padding-top: 0.8rem;
+  padding-left: 1rem;
+  word-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b2b2b;
+  letter-spacing: -0.2px;
+}
+
+.card-content p {
+  margin-top: 3px;
+  color: #767676;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.card-content .tags {
+  line-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card-content .tags span {
+  font-size: 13px;
+  background-color: #efefef;
+  padding: 0px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Recommendations Section CSS */
+
+.recommendations {
+  width: 1440px;
+  height: 32.4rem;
+  margin-top: 3.7rem;
+  letter-spacing: 1px;
+}
+
+.recommendations > h1 {
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.recommendations > p {
+  text-align: center;
+  color: #767676;
+  margin-block: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.02px;
+}
+
+.recommendations .card-section1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-inline: 6rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.recommendations .card-section1 .card {
+  background-color: #fff;
+  width: 21.3rem;
+  height: 20.4rem;
+  padding-left: 16px;
+  padding-top: 16px;
+  /* border: 2px solid black; */
+  text-transform: capitalize;
+}
+
+/* .recommendations .card img {
+  width: 9.1rem;
+  height: 1.1rem;
+} */
+
+.recommendations .card > img {
+  width: 9.1rem;
+  height: 1.1rem;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.recommendations .card-content1 h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-top: 15px;
+  margin-left: 10px;
+  letter-spacing: 0.1px;
+}
+
+.recommendations .card-content1 p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #767676;
+  margin-top: 18px;
+  margin-left: 10px;
+  letter-spacing: 0px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.profile img {
+  width: 89.61px;
+  height: 81.09px;
+}
+
+.profile div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-left: -3px;
+  margin-top: -2px;
+  letter-spacing: 0px;
+}
+
+.profile h5 {
+  color: #767676;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: -5px;
+  margin-left: -3px;
+  letter-spacing: 0px;
+}
+
+/* Contact Section CSS */
+
+.contact {
+  display: flex;
+  width: 100%;
+}
+
+.my-info {
+  margin: 4.2rem 5.8rem;
+  margin-right: 2rem;
+  width: 70%;
+}
+
+.my-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-left: 5px;
+  margin-top: -8px;
+  letter-spacing: 0.8px;
+}
+
+.my-info form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 0.1rem;
+  background-color: #fff;
+  padding: 25px 36px 25px 36px;
+  gap: 22px;
+}
+
+.my-info form input {
+  background-color: #f0f0f6;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 773.38px;
+  height: 50px;
+  margin-top: -15px;
+  margin-left: 3px;
+  padding-left: 25px;
+  font-size: 1rem;
+}
+
+.my-info form label {
+  margin-left: 3px;
+  margin-top: 0.8px;
+  color: #767676;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.my-info form #message {
+  resize: none;
+  overflow: auto;
+  /* margin-top: 0.5rem; */
+  background-color: #f0f0f6;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  /* padding: 1rem; */
+  width: 773.38px;
+  height: 210.42px;
+  margin-top: -8px;
+}
+
+.send-message-btn {
+  width: 151px;
+  height: 50.83px;
+  padding: 17px 16px 17px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -5px;
+  margin-left: 3px;
+}
+
+.contact-info {
+  margin: 4rem 6rem;
+  margin-left: 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 25px; */
+}
+
+.contact-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-left: -5px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  letter-spacing: 0.8px;
+}
+
+.contact-info .box {
+  margin-top: 17.5px;
+  margin-left: -5px;
+  padding-bottom: 1rem;
+  padding-top: 6rem;
+  background-color: #fff;
+  color: #8b8a8af2;
+  width: 372.7px;
+  height: 211.11px;
+  position: relative;
+}
+
+.contact-info .box .img1 {
+  position: absolute;
+  width: 40.29px;
+  height: 40.21px;
+  top: 25px;
+  left: 165px;
+}
+
+.contact-info .box .img2 {
+  position: absolute;
+  width: 18.13px;
+  height: 18.1px;
+  top: 37px;
+  left: 177px;
+}
+
+.contact-info .box div {
+  display: flex;
+  /* background-color: #fff; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  margin-top: -2px;
+  margin-left: -8px;
+  line-height: 20px;
+}
+
+.contact-info .box div h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #767676;
+}
+
+.contact-info .box div p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #767676;
+}
+
+/* Footer Section CSS */
+
+.footer {
+  padding-bottom: 5rem;
+  height: 621px;
+}
+
+.footer .icons {
+  display: flex;
+  margin-left: 235px;
+  margin-top: -7px;
+  gap: 135px;
+}
+
+.footer-content {
+  margin-inline: 4rem;
+  height: 70%;
+}
+
+.footer-content > img {
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-links .partition-1 img {
+  width: 91px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 1px;
+}
+
+.footer-links .partition-1 .unimg {
+  width: 73px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.footer-links .partition-1 p {
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.footer-links {
+  display: flex;
+  align-items: start;
+  gap: 10rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  height: inherit;
+  white-space: nowrap;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links .partition-2 {
+  height: 100%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 11rem;
+  letter-spacing: 0px;
+}
+
+.footer-links .partition-2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.footer-content + h4 {
+  text-align: center;
+  color: #8b8a8af2;
+}
+
+.footer-links h1 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-links .partition-1 {
+  height: 100%;
+  margin-right: 6rem;
+  gap: 20px;
+}
+
+.footer-links ul li {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer-links .connect-images img {
+  margin-bottom: 5px;
+  width: 100px;
+  height: 25px;
+}
+
+.footer > h4 {
+  display: flex;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer > h4 img {
+  width: 21px;
+  height: 21px;
+  margin-right: 5px;
+}
+
+/* Skills Section CSS */
+
+.skills-container {
+  margin-top: 13rem;
+}
+
+.skills-container .skills > h1 {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2b2b2b;
+  padding-top: 2rem;
+}
+
+.skills-container .skills > p {
+  text-align: center;
+  color: #767676;
+  margin-top: 24px;
+  margin-left: 12px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card-section-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 30px;
+  margin-top: 25px;
+  margin-left: 100px;
+}
+
+.card-section-skills .card-skills {
+  margin: 1rem 0;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  width: 385px;
+  height: 316px;
+  margin-bottom: 0px;
+  padding-bottom: 20rem;
+}
+
+.card-content-skills {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-skills h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-left: 3px;
+  margin-top: 3px;
+  letter-spacing: 0.1px;
+}
+
+.taglines .tagline {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  width: 290.51px;
+  height: 24.24px;
+  color: #767676;
+  margin-left: 2px;
+  margin-top: 9.3px;
+  letter-spacing: 0.1px;
+}
+
+.taglines .line {
+  padding: 1.2px;
+  margin-top: 0.5rem;
+  width: 290.51px;
+  height: 6px;
+  border-radius: 30px;
+  border: 0.5px solid #ffb400;
+}
+
+.taglines .line .line-width {
+  width: 90%;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #ffb400;
+}
+
+.center-div {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.center-div .add-skill-1 {
+  width: 151px;
+  height: 51px;
+  padding: 17px 16px 17px 16px;
+  gap: 10px;
+  border-radius: 5px;
+  background: #ffb400;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  height: 1825px;
+}
+
+.add-skill-modal {
+  background-color: #fff;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 10rem;
+  border-radius: 10px;
+  z-index: 15;
+  width: 833px;
+  min-height: 894.65px;
+  padding: 36px 28px 30px 28px;
+  display: none;
+}
+
+.add-skill-modal h1 {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.add-skill-modal form {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+}
+
+.add-skill-modal form input {
+  margin-block: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 74px;
+  background-color: #f0f0f6;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.add-skill-modal form input[type="number"] {
+  text-align: center;
+}
+
+.add-skill-modal form label {
+  margin-block: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.add-skill-modal form p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.add-skill-modal form .partition-1 .skill {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.add-skill-modal form .partition-1 .proficiency {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #ff5252;
+  background-color: #fff;
+  color: #ff5252;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 151px;
+  height: 51px;
+  padding: 17px 16px 17px 16px;
+  gap: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-skill-2 {
+  width: 151px;
+  height: 51px;
+  padding: 17px 16px 17px 16px;
+  gap: 10px;
+  border-radius: 5px;
+  background: #ffb400;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-skill-modal .partition-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-skill-modal .buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin: 1.5rem 0.5rem 2rem 0;
+}
+
+.skills-container nav {
+  z-index: 0;
+}
+
+.grey-bg-skills {
+  background-color: #f0f0f6;
+  margin-top: -60px;
+}
