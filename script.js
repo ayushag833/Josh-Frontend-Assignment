@@ -15,8 +15,11 @@ const fullname = document.getElementById("fullname");
 const email = document.getElementById("email");
 const subject = document.getElementById("subject");
 const message = document.getElementById("msg");
+const contactModal = document.querySelector(".contact-modal");
+const confirmBtn = document.querySelector(".confirm-btn");
 
 let h6 = document.createElement("h6");
+const overlay = document.createElement("div");
 
 form1?.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -58,6 +61,7 @@ form1?.addEventListener("submit", (e) => {
   }
   h6.remove();
   console.log("Your Details :- ", obj);
+  contactModal.style.left = "50%";
 });
 
 form?.addEventListener("submit", (e) => {
@@ -131,20 +135,23 @@ form?.addEventListener("submit", (e) => {
   localStorage.setItem("data", JSON.stringify(data));
 
   modal.style.display = "none";
-  modal.parentElement.classList.remove("modal-overlay");
+  overlay.classList.remove("modal-overlay");
+  document.body.appendChild(overlay);
   window.location.reload();
 });
 
 btn1?.addEventListener("click", () => {
   modal.style.display = "block";
-  modal.parentElement.classList.add("modal-overlay");
+  overlay.classList.add("modal-overlay");
+  document.body.appendChild(overlay);
   window.scrollTo(0, 0);
 });
 
 cancel?.addEventListener("click", (e) => {
   e.preventDefault();
   modal.style.display = "none";
-  modal.parentElement.classList.remove("modal-overlay");
+  overlay.classList.remove("modal-overlay");
+  document.body.appendChild(overlay);
 });
 
 let prevEle;
@@ -163,6 +170,15 @@ switch (window.location.hash) {
     break;
   case "#contact":
     el = links[5];
+    break;
+}
+
+switch (window.location.pathname) {
+  case "/skills.html":
+    el = links[1];
+    break;
+  case "/index.html":
+    el = links[0];
     break;
 }
 
@@ -239,3 +255,7 @@ if (skillCard)
     </div> 
 </div>`;
   });
+
+confirmBtn?.addEventListener("click", () => {
+  contactModal.style.left = "-100%";
+});
