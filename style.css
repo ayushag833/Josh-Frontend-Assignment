@@ -725,6 +725,8 @@ main {
 
 .skills-container {
   margin-top: 13rem;
+  position: relative;
+  z-index: 12;
 }
 
 .skills-container .skills > h1 {
