@@ -360,6 +360,20 @@ main {
   margin-left: 1.87rem;
 }
 
+.slick-prev:before {
+  color: #000 !important;
+  font-size: 1.6rem !important;
+  margin-left: 3rem;
+  padding: 1rem;
+}
+
+.slick-next:before {
+  color: #000 !important;
+  font-size: 1.6rem !important;
+  margin-left: -8rem;
+  padding: 1rem;
+}
+
 .slick-track {
   margin-left: -1.375rem !important;
 }
