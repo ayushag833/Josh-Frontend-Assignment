@@ -180,6 +180,16 @@ parentEle.className === "skills-container"
 prevEle.classList.add("active");
 
 let el;
+
+switch (window.location.pathname) {
+  case "/skills.html":
+    el = links[1];
+    break;
+  case "/index.html":
+    el = links[0];
+    break;
+}
+
 switch (window.location.hash) {
   case "#projects":
     el = links[3];
@@ -189,15 +199,6 @@ switch (window.location.hash) {
     break;
   case "#contact":
     el = links[5];
-    break;
-}
-
-switch (window.location.pathname) {
-  case "/skills.html":
-    el = links[1];
-    break;
-  case "/index.html":
-    el = links[0];
     break;
 }
 
