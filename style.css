@@ -1201,7 +1201,8 @@ main {
   .open .nav-links {
     transform: translateY(0);
   }
-  .open .cross-icon {
+  .open .cross-icon,
+  .burger {
     display: block;
   }
   .open .burger-icon {
@@ -1295,6 +1296,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .partition-1 p {
+    margin-top: 1px;
   }
 }
 
