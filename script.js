@@ -77,6 +77,7 @@ form1?.addEventListener("submit", (e) => {
   h6.remove();
   console.log("Your Details :- ", obj);
   contactModal.style.left = "50%";
+  form1.reset();
 });
 
 form?.addEventListener("submit", (e) => {
