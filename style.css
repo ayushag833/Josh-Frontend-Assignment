@@ -1224,6 +1224,7 @@ main {
 @media screen and (max-width: 425px) {
   :root {
     font-size: 4px;
+    max-width: 12.5rem;
   }
   .card-section,
   .card-section-skills {
@@ -1241,13 +1242,22 @@ main {
     justify-content: center;
   }
   .recommendations {
-    margin-top: 160rem;
+    margin-top: 164rem;
+  }
+  .projects {
+    margin-left: 0;
   }
   .hero-section {
     margin-top: 0;
   }
   .footer {
     height: 62rem;
+  }
+  nav img {
+    margin-left: 5rem;
+  }
+  main {
+    margin-right: 0;
   }
   .footer-links,
   .contact {
@@ -1258,9 +1268,10 @@ main {
   .recommendations {
     width: 270px;
   }
-  .footer-content > img {
-    margin-left: 18rem;
-    margin-bottom: 0.625rem;
+  .footer-image {
+    margin-left: 18.5rem !important;
+    margin-bottom: 3rem;
+    margin-top: -1rem !important;
   }
   .footer-links .partition-2 {
     margin-left: 0;
@@ -1272,7 +1283,7 @@ main {
     width: 53rem;
   }
   .contact-info {
-    margin-left: 0;
+    margin-inline: 0;
   }
   .footer .icons {
     margin-left: 0;
