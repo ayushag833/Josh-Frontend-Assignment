@@ -17,6 +17,23 @@ const subject = document.getElementById("subject");
 const message = document.getElementById("msg");
 const contactModal = document.querySelector(".contact-modal");
 const confirmBtn = document.querySelector(".confirm-btn");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menuLinks = document.querySelectorAll("nav ul li a");
+const navLinks = document.querySelector(".nav-links");
+
+menuLinks?.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    burgerIcon.style.display = "block";
+    crossIcon.style.display = "none";
+  });
+});
+
+burger?.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  navLinks.style.display = "flex";
+});
 
 let h6 = document.createElement("h6");
 const overlay = document.createElement("div");
@@ -56,7 +73,7 @@ form1?.addEventListener("submit", (e) => {
     }
   });
   if (!isValid) {
-    window.scrollTo(2450, 2450);
+    window.scrollTo(0, 2450);
     return;
   }
   h6.remove();
@@ -137,6 +154,7 @@ form?.addEventListener("submit", (e) => {
   modal.style.display = "none";
   overlay.classList.remove("modal-overlay");
   document.body.appendChild(overlay);
+  document.body.appendChild(modal);
   window.location.reload();
 });
 
@@ -144,6 +162,7 @@ btn1?.addEventListener("click", () => {
   modal.style.display = "block";
   overlay.classList.add("modal-overlay");
   document.body.appendChild(overlay);
+  document.body.appendChild(modal);
   window.scrollTo(0, 0);
 });
 
@@ -152,6 +171,7 @@ cancel?.addEventListener("click", (e) => {
   modal.style.display = "none";
   overlay.classList.remove("modal-overlay");
   document.body.appendChild(overlay);
+  document.body.appendChild(modal);
 });
 
 let prevEle;
