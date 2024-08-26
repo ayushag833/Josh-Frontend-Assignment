@@ -25,8 +25,6 @@ const navLinks = document.querySelector(".nav-links");
 menuLinks?.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("open");
-    burgerIcon.style.display = "block";
-    crossIcon.style.display = "none";
   });
 });
 

@@ -1120,7 +1120,13 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
   .card-section-skills {
-    margin-left: 15rem;
+    margin-left: 0;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .recommendations {
     margin-top: 50rem;
@@ -1171,7 +1177,6 @@ main {
   .proud-coder-image {
     left: 45.48rem;
   }
-
   .nav-links {
     position: absolute;
     top: 101%;
@@ -1187,27 +1192,19 @@ main {
     box-shadow: 0.3rem 0.3rem 0.6rem 0px rgba(0, 0, 0, 0.1);
     display: none;
   }
-
   nav ul li a {
     font-size: 1.5rem;
   }
-
   nav ul li {
     margin-top: 0.6rem;
   }
-
-  nav.open .nav-links {
+  .open .nav-links {
     transform: translateY(0);
   }
-
-  .burger,
-  .burger-icon,
-  nav.open .cross-icon {
+  .open .cross-icon {
     display: block;
   }
-
-  .cross-icon,
-  nav.open .burger-icon {
+  .open .burger-icon {
     display: none;
   }
 }
@@ -1230,7 +1227,7 @@ main {
     grid-template-columns: repeat(1, 1fr);
   }
   .card-section-skills {
-    margin-left: 32rem;
+    margin-left: 0;
   }
   .proud-coder-image {
     display: none;
