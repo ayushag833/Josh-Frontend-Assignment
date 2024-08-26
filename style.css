@@ -1253,7 +1253,10 @@ main {
     height: 62rem;
   }
   nav img {
-    margin-left: 5rem;
+    margin-left: 30rem;
+  }
+  .burger {
+    right: 30rem;
   }
   main {
     margin-right: 0;
