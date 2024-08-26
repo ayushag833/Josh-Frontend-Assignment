@@ -365,7 +365,7 @@ main {
 }
 
 .slick-dots li button:before {
-  content: url("/images/recommendations-images/Ellipse\ 20.png") !important;
+  content: url("images/recommendations-images/Ellipse\ 20.png") !important;
   margin-left: -5.625rem !important;
   margin-top: 2.81rem !important;
   color: #ffde8d !important;
