@@ -1224,7 +1224,7 @@ main {
 @media screen and (max-width: 425px) {
   :root {
     font-size: 4px;
-    max-width: 12.5rem;
+    max-width: 30rem;
   }
   .card-section,
   .card-section-skills {
