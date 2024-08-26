@@ -76,6 +76,7 @@ nav ul li a {
   cursor: pointer;
   position: relative;
   right: 5rem;
+  pointer-events: none;
 }
 
 .burger-icon,
@@ -1134,10 +1135,13 @@ main {
   main {
     width: 70rem;
   }
-  .hero-section p,
+  .hero-section p {
+    letter-spacing: 0;
+  }
   .projects > p,
   .recommendations > p,
   .skills-container .skills > p {
+    letter-spacing: 0px;
     font-size: 1.1rem;
   }
   .card-content h3,
@@ -1216,6 +1220,11 @@ main {
   }
   .card-section .card {
     padding-bottom: 1rem;
+  }
+  .card-content .tags span {
+    border: 0;
+    box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.5);
+    padding-top: 1px;
   }
 }
 
