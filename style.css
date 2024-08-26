@@ -76,7 +76,6 @@ nav ul li a {
   cursor: pointer;
   position: relative;
   right: 5rem;
-  pointer-events: none;
 }
 
 .burger-icon,
