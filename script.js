@@ -270,7 +270,7 @@ prevLink?.classList.add("active");
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
-    prevLink.classList.remove("active");
+    prevLink?.classList.remove("active");
     prevLink = link;
     link.classList.add("active");
   });
