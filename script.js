@@ -244,7 +244,7 @@ cancel?.addEventListener("click", (e) => {
   document.body.appendChild(modal);
 });
 
-let prevLink;
+let prevLink = links[0];
 
 switch (window.location.pathname) {
   case "/skills.html":
@@ -265,12 +265,11 @@ switch (window.location.hash) {
     prevLink = links[5];
     break;
 }
-console.log(window.location.pathname, window.location.hash);
-prevLink?.classList.add("active");
+prevLink.classList.add("active");
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
-    prevLink?.classList.remove("active");
+    prevLink.classList.remove("active");
     prevLink = link;
     link.classList.add("active");
   });
