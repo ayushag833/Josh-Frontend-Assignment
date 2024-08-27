@@ -4,7 +4,6 @@ const btn1 = document.querySelector(".add-skill-1");
 const cancel = document.querySelector(".cancel");
 const modal = document.querySelector(".add-skill-modal");
 const links = document.querySelectorAll("nav ul a");
-const parentEle = document.querySelector("nav").parentElement;
 const skillCard = document.querySelector(".card-section-skills");
 const form = document.querySelector(".add-skill-modal form");
 const form1 = document.querySelector(".my-info form");
@@ -14,7 +13,8 @@ const proficiency = document.getElementById("proficiency");
 const fullname = document.getElementById("fullname");
 const email = document.getElementById("email");
 const subject = document.getElementById("subject");
-const message = document.getElementById("msg");
+const msg = document.getElementById("msg");
+const message = document.getElementById("message");
 const contactModal = document.querySelector(".contact-modal");
 const confirmBtn = document.querySelector(".confirm-btn");
 const burger = document.querySelector(".burger");
@@ -35,36 +35,91 @@ burger?.addEventListener("click", () => {
 
 let h6 = document.createElement("h6");
 const overlay = document.createElement("div");
+let i = 1;
+
+function addValidation(type, input, color, flag) {
+  if (flag) {
+    h6.classList.add("validation1");
+    input.insertAdjacentElement("afterend", h6);
+  }
+
+  const existingImg = input.nextElementSibling;
+  if (existingImg && existingImg.tagName === "IMG") {
+    existingImg.remove();
+  }
+
+  const img = document.createElement("img");
+  img.src = `images/contact-images/${type}.png`;
+  img.classList.add("icon");
+  img.style.zIndex = i;
+  i++;
+  switch (input) {
+    case email:
+      img.style.top = "10.75rem";
+      break;
+    case subject:
+      img.style.top = "17.125rem";
+      break;
+    case msg:
+      img.style.top = "22.75rem";
+      break;
+  }
+  input.insertAdjacentElement("afterend", img);
+  if (input === msg) message.style.border = `2px solid ${color}`;
+  else input.style.border = `2px solid ${color}`;
+}
 
 form1?.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(form1);
   let obj = {};
   let isValid = true;
+  let fullnameValid = false,
+    emailValid = false,
+    subjectValid = false,
+    msgValid = false;
   formData.forEach((value, key) => {
     if (isValid && key === "Full Name" && value === "") {
       h6.textContent = "* Enter Full Name";
-      h6.classList.add("validation1");
-      fullname.insertAdjacentElement("afterend", h6);
+      addValidation("delete", fullname, "red", true);
+      fullnameValid = false;
       isValid = false;
+    } else if (fullnameValid) {
+      addValidation("circle", fullname, "green", false);
+      fullnameValid = true;
     }
     if (isValid && key === "Email" && value === "") {
       h6.textContent = "* Enter Email";
-      h6.classList.add("validation1");
-      email.insertAdjacentElement("afterend", h6);
+      addValidation("delete", email, "red", true);
+      emailValid = false;
+      fullnameValid = true;
       isValid = false;
+    } else if (emailValid) {
+      addValidation("circle", email, "green", false);
+      emailValid = true;
     }
     if (isValid && key === "Subject" && value === "") {
       h6.textContent = "* Enter Subject";
-      h6.classList.add("validation1");
-      subject.insertAdjacentElement("afterend", h6);
+      addValidation("delete", subject, "red", true);
+      subjectValid = false;
+      emailValid = true;
+      fullnameValid = true;
       isValid = false;
+    } else if (subjectValid) {
+      addValidation("circle", subject, "green", false);
+      subjectValid = true;
     }
     if (isValid && key === "Message" && value === "") {
       h6.textContent = "* Enter Message";
-      h6.classList.add("validation1");
-      message.insertAdjacentElement("afterend", h6);
+      addValidation("delete", msg, "red", true);
+      msgValid = false;
+      subjectValid = true;
+      emailValid = true;
+      fullnameValid = true;
       isValid = false;
+    } else if (msgValid) {
+      addValidation("circle", msg, "green", false);
+      msgValid = true;
     }
     if (isValid && value) {
       obj[key.trim()] = value.trim();
@@ -74,11 +129,27 @@ form1?.addEventListener("submit", (e) => {
     window.scrollTo(0, 2450);
     return;
   }
-  h6.remove();
+  resetEverything();
   console.log("Your Details :- ", obj);
   contactModal.style.left = "50%";
-  form1.reset();
 });
+
+function resetEverything() {
+  form1.reset();
+  h6.remove();
+  const arr = [fullname, email, subject, msg];
+  for (let i = 0; i < 4; i++) {
+    if (arr[i] === msg) message.style.border = "none";
+    else arr[i].style.border = "none";
+
+    while (
+      arr[i].nextElementSibling &&
+      arr[i].nextElementSibling.tagName === "IMG"
+    ) {
+      arr[i].nextElementSibling.remove();
+    }
+  }
+}
 
 form?.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -173,46 +244,35 @@ cancel?.addEventListener("click", (e) => {
   document.body.appendChild(modal);
 });
 
-let prevEle;
-parentEle.className === "skills-container"
-  ? (prevEle = links[1])
-  : (prevEle = links[0]);
-prevEle.classList.add("active");
-
-let el;
+let prevLink;
 
 switch (window.location.pathname) {
   case "/skills.html":
-    el = links[1];
+    prevLink = links[1];
     break;
   case "/index.html":
-    el = links[0];
+    prevLink = links[0];
     break;
 }
-
 switch (window.location.hash) {
   case "#projects":
-    el = links[3];
+    prevLink = links[3];
     break;
   case "#recommendations":
-    el = links[4];
+    prevLink = links[4];
     break;
   case "#contact":
-    el = links[5];
+    prevLink = links[5];
     break;
 }
 
-if (el) {
-  prevEle.classList.remove("active");
-  prevEle = el;
-  el.classList.add("active");
-}
+prevLink.classList.add("active");
 
-links.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    prevEle.classList.remove("active");
-    prevEle = ele;
-    ele.classList.add("active");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    prevLink.classList.remove("active");
+    prevLink = link;
+    link.classList.add("active");
   });
 });
 

@@ -36,6 +36,10 @@ body {
   justify-content: center;
 }
 
+.home nav {
+  z-index: 999;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -516,6 +520,14 @@ main {
   background-color: var(--primary-color);
   padding: 1.56rem 2.25rem 1.56rem 2.25rem;
   gap: 1.375rem;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  width: 1.2rem;
+  right: 3.125rem;
+  top: 4.375rem;
 }
 
 .my-info form input {
@@ -653,6 +665,7 @@ main {
   border-radius: 0.6rem;
   box-shadow: 0.3rem 0.3rem 0.6rem 0px rgba(0, 0, 0, 0.1);
   transition: 0.5s all ease-in-out;
+  z-index: 990;
 }
 
 .contact-modal h3 {
