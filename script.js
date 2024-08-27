@@ -265,6 +265,7 @@ switch (window.location.hash) {
     prevLink = links[5];
     break;
 }
+console.log(window.location.pathname, window.location.hash);
 
 prevLink.classList.add("active");
 
